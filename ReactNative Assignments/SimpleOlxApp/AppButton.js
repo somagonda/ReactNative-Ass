@@ -1,0 +1,61 @@
+import React, { Component } from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import colors from '../config/colors';
+
+
+// function AppButton({title}){
+//     return(
+        
+//         <TouchableOpacity style={styles.buttondesign}>
+//             <Text style={styles.text}>{title}</Text>
+//         </TouchableOpacity>
+       
+//     )
+// }
+
+
+
+class AppButton extends Component{
+     render(){ return(
+        
+        <TouchableOpacity style={styles.buttondesign}>
+            <Text style={styles.text}>{this.props.title}</Text>
+        </TouchableOpacity>
+       
+    )
+}}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const styles = StyleSheet.create({
+    buttondesign: {
+        backgroundColor: colors.primary,
+        borderRadius: 25,
+        justifyContent: "center",
+        alignItems: "center",
+        padding: 15,
+        width: '100%',
+        marginVertical: 10
+    },
+    text: {
+        color: colors.white,
+        fontSize: 18,
+        textTransform: 'uppercase',
+        fontWeight: 'bold'
+
+    }
+})
+
+export default AppButton;
